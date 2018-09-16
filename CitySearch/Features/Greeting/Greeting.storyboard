@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7v2-bO-YZk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Greeting View Controller-->
+        <scene sceneID="qb9-uE-Djh">
+            <objects>
+                <viewController id="7v2-bO-YZk" customClass="GreetingViewController" customModule="CitySearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSj-tm-ScV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView hidden="YES" opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQd-fw-zij">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sug-6b-zbQ">
+                                <rect key="frame" x="14" y="88" width="347.5" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="475" id="wmz-7l-fpx"/>
+                                </constraints>
+                                <string key="text"> Welcome to City Search!
+
+An application that lets you discovery cities all over the world.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.92151113013698638" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5p-kZ-ChH">
+                                <rect key="frame" x="14.5" y="524" width="347.5" height="48"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.61960784313725492" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Let's Get Started">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedPressed" destination="7v2-bO-YZk" eventType="touchUpInside" id="HFT-vs-gVW"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EiX-Dt-c39">
+                                <rect key="frame" x="157" y="313.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="nQb-3c-3Hx"/>
+                                    <constraint firstAttribute="width" secondItem="EiX-Dt-c39" secondAttribute="height" id="ogr-Gd-jvh"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j5p-kZ-ChH" firstAttribute="top" secondItem="Sug-6b-zbQ" secondAttribute="bottom" constant="43" id="A3g-Ri-IR1"/>
+                            <constraint firstItem="Sug-6b-zbQ" firstAttribute="centerX" secondItem="cLM-C9-407" secondAttribute="centerX" id="FhP-Rq-JpV"/>
+                            <constraint firstItem="EiX-Dt-c39" firstAttribute="centerX" secondItem="cLM-C9-407" secondAttribute="centerX" id="Jhr-TM-Lnn"/>
+                            <constraint firstItem="EiX-Dt-c39" firstAttribute="centerY" secondItem="cLM-C9-407" secondAttribute="centerY" id="Jzt-cR-ahx"/>
+                            <constraint firstItem="Sug-6b-zbQ" firstAttribute="centerY" secondItem="cLM-C9-407" secondAttribute="centerY" constant="-60" id="Zdc-Be-1CH"/>
+                            <constraint firstItem="j5p-kZ-ChH" firstAttribute="centerX" secondItem="Sug-6b-zbQ" secondAttribute="centerX" id="b8C-TP-cW8"/>
+                            <constraint firstItem="Sug-6b-zbQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cLM-C9-407" secondAttribute="leading" constant="10" id="bPv-Vu-cwS"/>
+                            <constraint firstItem="cLM-C9-407" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sug-6b-zbQ" secondAttribute="trailing" constant="10" id="eK9-Ly-exI"/>
+                            <constraint firstItem="j5p-kZ-ChH" firstAttribute="width" secondItem="Sug-6b-zbQ" secondAttribute="width" id="jVB-N7-xQl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cLM-C9-407"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="EiX-Dt-c39" id="UWp-TU-wlS"/>
+                        <outlet property="coverView" destination="YQd-fw-zij" id="PNZ-hB-vaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgx-ob-XOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="34"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="UKm-fL-N89">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="p4m-eV-adQ" customClass="LoadingViewController" customModule="CitySearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GR4-if-03W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BO6-Eq-bnw">
+                                <rect key="frame" x="157" y="313.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BO6-Eq-bnw" secondAttribute="height" id="OY9-mX-Vby"/>
+                                    <constraint firstAttribute="width" constant="60" id="psn-F2-vnH"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-eQ-gLC">
+                                <rect key="frame" x="10" y="95.5" width="355" height="56.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.92151113009999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This may take some time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDe-bR-PqU">
+                                <rect key="frame" x="77.5" y="182" width="220.5" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.92151113009999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E3b-eQ-gLC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="E0c-iH-tq0" secondAttribute="leading" constant="10" id="20f-Wr-jlc"/>
+                            <constraint firstItem="BO6-Eq-bnw" firstAttribute="centerY" secondItem="E0c-iH-tq0" secondAttribute="centerY" id="4Tc-ce-gzH"/>
+                            <constraint firstItem="VDe-bR-PqU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E0c-iH-tq0" secondAttribute="leading" constant="10" id="6J7-EW-LGC"/>
+                            <constraint firstItem="E0c-iH-tq0" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="E3b-eQ-gLC" secondAttribute="trailing" constant="10" id="7Yj-5F-4Wk"/>
+                            <constraint firstItem="VDe-bR-PqU" firstAttribute="centerX" secondItem="E3b-eQ-gLC" secondAttribute="centerX" id="8Yd-wZ-BLD"/>
+                            <constraint firstItem="E3b-eQ-gLC" firstAttribute="centerY" secondItem="E0c-iH-tq0" secondAttribute="centerY" constant="-220" id="Iph-dB-NTE"/>
+                            <constraint firstItem="E3b-eQ-gLC" firstAttribute="width" relation="lessThanOrEqual" secondItem="E0c-iH-tq0" secondAttribute="width" constant="475" id="Qcz-fS-0cP"/>
+                            <constraint firstItem="E3b-eQ-gLC" firstAttribute="centerX" secondItem="E0c-iH-tq0" secondAttribute="centerX" id="erF-R0-FVj"/>
+                            <constraint firstItem="E0c-iH-tq0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VDe-bR-PqU" secondAttribute="trailing" constant="10" id="m7U-ac-va5"/>
+                            <constraint firstItem="VDe-bR-PqU" firstAttribute="top" secondItem="E3b-eQ-gLC" secondAttribute="bottom" constant="30" id="ni1-av-e13"/>
+                            <constraint firstItem="BO6-Eq-bnw" firstAttribute="centerX" secondItem="E0c-iH-tq0" secondAttribute="centerX" id="oCk-0Z-eiE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E0c-iH-tq0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYC-fA-wdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
